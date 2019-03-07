@@ -1,14 +1,14 @@
 package AmarpalAmrith.DiceRoll;
 
-import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
 
         Utilities.welcomeMsg("Welcome to Dice Roll :)");
-        Random randomNumberGenerator = new Random();
-        int randomNumber = randomNumberGenerator.nextInt(6) + 1;
-        System.out.println("Dice rolled. Result: " + randomNumber);
+        int numberOfRolls = Utilities.requestInt("Please enter how many dice you would like to roll");
+
+        for (int i = 1; i <= numberOfRolls; i++) {
+            System.out.println("Dice roll " + i + " Result: " + Utilities.diceRoll());
+        }
     }
 }
