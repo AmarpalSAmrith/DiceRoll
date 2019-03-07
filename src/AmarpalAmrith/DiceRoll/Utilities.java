@@ -12,9 +12,9 @@ public class Utilities {
         }
         System.out.println(s.toString());
     }
-    public static int diceRoll(){
+    public static int diceRoll(int numberOfSides){
         Random randomNumberGenerator = new Random();
-        return randomNumberGenerator.nextInt(6) + 1;
+        return randomNumberGenerator.nextInt(numberOfSides) + 1;
     }
     public static int requestInt(String msg){
         Scanner scanner = new Scanner(System.in);
